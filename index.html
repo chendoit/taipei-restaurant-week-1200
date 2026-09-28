@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>台北餐廳週 1200 元套餐怎麼選 · 27 家完整評比</title>
+<meta name="description" content="2026 台北餐廳週 27 家 1200 元套餐完整整理：菜色道數、食材、含酒飲、是否公布原價，一次看懂哪一檔最划算。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f4ec;
+  --paper-2:#fffdf8;
+  --ink:#1f2420;
+  --ink-2:#4b534d;
+  --ink-3:#8a8f88;
+  --line:#e2dccd;
+  --forest:#2e4d41;
+  --forest-2:#3d6a58;
+  --gold:#b8894a;
+  --gold-soft:#f0e2cc;
+
+  --lv1:#2e7d5b;  --lv1-bg:#e8f3ec;  --lv1-bd:#bcdcca;
+  --lv2:#4a7ba7;  --lv2-bg:#e9f1f8;  --lv2-bd:#c2d7ea;
+  --lv3:#9a7b3f;  --lv3-bg:#f8f1e2;  --lv3-bd:#e4d3ac;
+  --lv4:#8a5a5a;  --lv4-bg:#f7ecec;  --lv4-bd:#e5caca;
+
+  --radius:16px;
+  --shadow-s:0 1px 2px rgba(31,36,32,.05),0 4px 14px rgba(31,36,32,.05);
+  --shadow-m:0 2px 4px rgba(31,36,32,.05),0 12px 34px rgba(31,36,32,.09);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(1200px 500px at 12% -8%, rgba(46,77,65,.07), transparent 60%),
+    radial-gradient(900px 420px at 92% 4%, rgba(184,137,74,.09), transparent 62%);
+  background-repeat:no-repeat;
+}
+h1,h2,h3{font-family:"Noto Serif TC",serif;line-height:1.35;margin:0;letter-spacing:.02em}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;padding:76px 0 56px;border-bottom:1px solid var(--line)}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 -1px 0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:.22em;font-weight:500;color:var(--forest-2);
+  text-transform:uppercase;margin-bottom:22px;
+}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:900;letter-spacing:.04em;max-width:16em}
+.hero h1 em{font-style:normal;color:var(--gold);position:relative;white-space:nowrap}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.08em;height:.34em;
+  background:linear-gradient(transparent,var(--gold-soft));z-index:-1;
+}
+.hero p.lede{margin:22px 0 0;max-width:44em;color:var(--ink-2);font-size:17px;font-weight:300}
+.meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:13px;color:var(--ink-2);box-shadow:var(--shadow-s);
+}
+.chip b{color:var(--forest);font-weight:700}
+.sw{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+
+/* ---------- LEGEND / FILTER ---------- */
+.toolbar{position:sticky;top:0;z-index:60;background:rgba(247,244,236,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 0}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fbtn{
+  appearance:none;border:1px solid var(--line);background:var(--paper-2);color:var(--ink-2);
+  font-family:inherit;font-size:13.5px;font-weight:500;letter-spacing:.03em;
+  padding:8px 15px;border-radius:999px;cursor:pointer;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease,border-color .16s ease;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.fbtn:hover{transform:translateY(-1px);box-shadow:var(--shadow-s);border-color:var(--gold)}
+.fbtn .dot{width:8px;height:8px;border-radius:50%;flex:none}
+.fbtn.is-on{background:var(--forest);border-color:var(--forest);color:#fff;box-shadow:0 6px 16px rgba(46,77,65,.22)}
+.fbtn.is-on .dot{box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+.fbtn.reset{margin-left:auto;border-style:dashed;color:var(--ink-3)}
+.searchbox{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:7px 15px;box-shadow:var(--shadow-s)}
+.searchbox input{border:0;background:transparent;font-family:inherit;font-size:13.5px;width:140px;color:var(--ink);outline:none}
+.searchbox input::placeholder{color:var(--ink-3)}
+
+/* ---------- SUMMARY STRIP ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 8px}
+.stat{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow-s);position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,var(--gold))}
+.stat .n{font-family:"Playfair Display",serif;font-size:30px;font-weight:700;line-height:1;color:var(--ink)}
+.stat .t{font-size:12.5px;color:var(--ink-3);margin-top:6px;letter-spacing:.06em}
+
+/* ---------- SECTION LABEL ---------- */
+.grp{display:flex;align-items:baseline;gap:14px;margin:52px 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.grp h2{font-size:23px;font-weight:700}
+.grp span{font-size:12.5px;color:var(--ink-3);letter-spacing:.14em}
+.grp .rule{flex:1;height:1px}
+
+/* ---------- CARD ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 24px 20px;box-shadow:var(--shadow-s);
+  transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s ease,border-color .22s ease;
+  position:relative;display:flex;flex-direction:column;
+}
+.card::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--c,var(--gold));opacity:.9}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-m);border-color:#d8cfba}
+.card.is-hidden{display:none}
+
+.c-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:10px}
+.c-head h3{font-size:19.5px;font-weight:700;letter-spacing:.03em;flex:1}
+.badge{
+  flex:none;display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;font-weight:700;letter-spacing:.08em;
+  padding:5px 11px;border-radius:999px;border:1px solid;white-space:nowrap;
+}
+.lv1{color:var(--lv1);background:var(--lv1-bg);border-color:var(--lv1-bd)}
+.lv2{color:var(--lv2);background:var(--lv2-bg);border-color:var(--lv2-bd)}
+.lv3{color:var(--lv3);background:var(--lv3-bg);border-color:var(--lv3-bd)}
+.lv4{color:var(--lv4);background:var(--lv4-bg);border-color:var(--lv4-bd)}
+
+.terms{font-size:12.5px;color:var(--ink-2);background:#f4f0e6;border:1px dashed #ddd4bd;border-radius:8px;padding:5px 10px;display:inline-block;margin-bottom:14px;letter-spacing:.02em}
+
+.dishes{list-style:none;margin:0 0 16px;padding:0;flex:1}
+.dishes li{position:relative;padding:5px 0 5px 20px;font-size:14.5px;color:var(--ink-2);border-bottom:1px dashed #eee7d8}
+.dishes li:last-child{border-bottom:0}
+.dishes li::before{content:"";position:absolute;left:3px;top:14px;width:5px;height:5px;border-radius:50%;background:var(--c,var(--gold));opacity:.75}
+
+.why{
+  font-size:13.5px;line-height:1.7;color:var(--ink-2);
+  background:#faf7ef;border-left:3px solid var(--c,var(--gold));border-radius:0 10px 10px 0;
+  padding:11px 14px;margin-bottom:16px;
+}
+.why strong{color:var(--ink);font-weight:600}
+
+.c-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line);margin-top:auto}
+.price{font-family:"Playfair Display",serif;font-size:16px;font-weight:700;color:var(--forest);letter-spacing:.02em}
+.price small{font-family:"Noto Sans TC",sans-serif;font-size:11.5px;font-weight:400;color:var(--ink-3);display:block;letter-spacing:.04em;margin-top:2px}
+.linkbtn{
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  font-size:13px;font-weight:500;color:#35446e;
+  border:1px solid #d6dcec;background:#f4f6fb;border-radius:999px;padding:7px 14px;
+  transition:background .18s ease,transform .18s ease;
+}
+.linkbtn:hover{background:#e8edf8;transform:translateX(2px)}
+.linkbtn svg{width:12px;height:12px}
+
+.empty{display:none;text-align:center;padding:60px 0;color:var(--ink-3);font-size:15px}
+.empty.on{display:block}
+
+/* ---------- TIPS ---------- */
+.tips{margin:64px 0 0;background:var(--forest);color:#f2efe6;border-radius:22px;padding:38px 40px;position:relative;overflow:hidden}
+.tips::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.05)}
+.tips h2{font-size:22px;color:#fff;margin-bottom:6px;position:relative}
+.tips>p{color:rgba(242,239,230,.75);font-size:14px;margin:0 0 22px;position:relative}
+.tips ol{margin:0;padding:0;list-style:none;counter-reset:t;position:relative}
+.tips li{counter-increment:t;display:flex;gap:14px;padding:9px 0;font-size:14.5px;color:rgba(242,239,230,.9);border-bottom:1px solid rgba(255,255,255,.08)}
+.tips li:last-child{border-bottom:0}
+.tips li::before{
+  content:counter(t,decimal-leading-zero);font-family:"Playfair Display",serif;
+  color:var(--gold);font-size:14px;padding-top:2px;
+}
+
+footer{margin:56px 0 0;padding:28px 0 46px;border-top:1px solid var(--line);color:var(--ink-3);font-size:12.5px;line-height:1.9;display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between}
+footer a{color:var(--forest-2);text-decoration:none;border-bottom:1px solid #c9d6cf}
+footer a:hover{border-color:var(--forest-2)}
+
+@media (max-width:860px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .tips{padding:28px 24px;border-radius:18px}
+  .searchbox{margin-left:0;order:9;width:100%}
+  .searchbox input{width:100%}
+  .fbtn.reset{margin-left:0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  .hero{padding:52px 0 40px}
+  .grid{grid-template-columns:1fr}
+  .card{padding:20px 18px 18px}
+  .card::before{left:18px;right:18px}
+}
+@media print{.toolbar,.c-foot .linkbtn{display:none}.card{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">2026 TAIPEI RESTAURANT WEEK · 9/1 – 9/30</div>
+    <h1>台北餐廳週 <em>1200 元套餐</em> 怎麼選</h1>
+    <p class="lede">中港台、法式歐陸、義式共 <b>27 家</b>參與。每家都附上套餐吃得到什麼，並依「道數、食材、有沒有含酒飲、有沒有公布原價」四個面向判斷值不值得。以下是依官網公布內容整理的比較，不是官方評價。</p>
+    <div class="meta-row">
+      <span class="chip"><i class="sw"></i>27 家餐廳完整比對</span>
+      <span class="chip"><i class="sw"></i>每家附官網詳情連結</span>
+      <span class="chip"><i class="sw"></i>多數套餐外加 <b>10% 服務費</b></span>
+      <span class="chip"><i class="sw"></i>整理於 <b>2026/9/28</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap filters">
+    <button class="fbtn is-on" data-f="all" data-lv="all">全部 <span class="cnt"></span></button>
+    <button class="fbtn" data-f="lv1" data-lv="lv1"><i class="dot" style="background:var(--lv1)"></i>最划算</button>
+    <button class="fbtn" data-f="lv2" data-lv="lv2"><i class="dot" style="background:var(--lv2)"></i>划算</button>
+    <button class="fbtn" data-f="lv3" data-lv="lv3"><i class="dot" style="background:var(--lv3)"></i>普通</button>
+    <button class="fbtn" data-f="lv4" data-lv="lv4"><i class="dot" style="background:var(--lv4)"></i>待確認</button>
+    <label class="searchbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8a8f88" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="搜尋餐廳或食材…" /></label>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="stats">
+    <div class="stat" style="--c:var(--lv1)"><div class="n">7</div><div class="t">最划算 · 道數多食材好</div></div>
+    <div class="stat" style="--c:var(--lv2)"><div class="n">13</div><div class="t">划算 · 內容紮實</div></div>
+    <div class="stat" style="--c:var(--lv3)"><div class="n">6</div><div class="t">普通 · 內容單純</div></div>
+    <div class="stat" style="--c:var(--lv4)"><div class="n">1</div><div class="t">待確認 · 資訊不足</div></div>
+  </div>
+
+  <div class="grp" data-cat="中式・港式・台菜"><h2>中式・港式・台菜</h2><span id="n-cn">0 家</span><i class="rule"></i></div>
+  <div class="grid" data-grid="cn"></div>
+
+  <div class="grp" data-cat="法式・歐陸"><h2>法式・歐陸</h2><span id="n-eu">0 家</span><i class="rule"></i></div>
+  <div class="grid" data-grid="eu"></div>
+
+  <div class="grp" data-cat="義式"><h2>義式</h2><span id="n-it">0 家</span><i class="rule"></i></div>
+  <div class="grid" data-grid="it"></div>
+
+  <div class="empty" id="empty">找不到符合的餐廳，換個關鍵字試試。</div>
+
+  <section class="tips">
+    <h2>訂位與避雷重點</h2>
+    <p>官網寫得清楚的不等於現場一定照做，這幾點事前確認最省事。</p>
+    <ol>
+      <li>訂位時務必備註「<b>台北餐廳週</b>」或「2026 台北餐廳週」，多數餐廳需要備註才吃到活動價。</li>
+      <li>多數套餐要外加 <b>10% 服務費</b>，1200 元實際付出 1320 元，選購時請一併算進去。</li>
+      <li>標示「<b>僅午間</b>」「<b>僅平日</b>」的餐廳，晚餐或假日可能沒有這個價位。</li>
+      <li>「<b>每人</b>」與「<b>雙人份</b>」差很多：香頌私宅洋樓、法菲利都寫得模稜兩可，訂位時先問。</li>
+      <li>只有 <b>SPC 秘密披薩俱樂部</b>、<b>筷炒</b> 等少數餐廳公布原價，其餘要靠道數與食材自行判斷。</li>
+      <li>菜色與供應時段以餐廳現場為準，熱門食材（如肋眼、干貝）可能提早售罄。</li>
+    </ol>
+  </section>
+
+  <footer>
+    <div>資料來源：<a href="https://restaurant-week.flavornews.com.tw/sheet" target="_blank" rel="noopener">台北餐廳週官網方案一覽</a>　·　整理於 2026/9/28　·　活動期間 9/1–9/30</div>
+    <div>划算程度為依公布內容之推估，非官方評價。</div>
+  </footer>
+</main>
+
+<script>
+const BASE = "https://restaurant-week.flavornews.com.tw/restaurant/";
+
+const DATA = {
+cn: [
+ {n:"臺北儂來餐廳", id:96, lv:1, t:"1 人套餐・僅平日午間・不收服務費", p:"1200", sub:"免服務費・平日午間限定",
+  d:["和風鮑魚鮮蔬沙拉","花膠魚翅燉雞盅","干貝八寶米糕","金香糖醋海大蝦","樹子蒸深海鱈魚","時令鮮果"],
+  w:"<strong>鮑魚、花膠、干貝、海大蝦一次吃到</strong>，這類食材單點不便宜，還免服務費。套餐含魚翅，介意者請留意。"},
+ {n:"北馥樓", id:119, lv:1, t:"每位 1200+10%・2 位起訂、須點 2 套以上", p:"1200+10%", sub:"2 位起・需 2 套以上",
+  d:["迎賓盤（煙燻梅子鰻、鳳尾魚、鎮江肴肉）","金沙軟殼蝦","蟹粉獅子頭","剁椒山泉鱸","百合山藥蘆筍","菊花豆腐盅","酒釀湯圓（另贈水果盤）"],
+  w:"2025 年入選米其林指南的滬菜，<strong>一人 7 道</strong>，單點菜色多在 420–780 元之間，等於用套餐價吃掉了大部分單點預算。"},
+ {n:"粵亮廣式料理", id:90, lv:1, t:"單人套餐 1200・服務費另計", p:"1200", sub:"單人・服務費另計",
+  d:["蟲草老廣煲湯","菠蘿極汁戰斧豬","松露金蒜海虎蝦","福貝蟹黃扒時蔬","蒸點三品","粵韻雙美點","冰糖燉水梨或擂茶貢糖糕"],
+  w:"<strong>一人 7 道</strong>，有虎蝦與戰斧豬，湯、點心、甜品都齊全，粵式套餐的完整性很高。"}
+],
+eu: [
+ {n:"92水鳥 西班牙料理", id:48, lv:1, t:"每人 1200+10%", p:"1200+10%", sub:"每人",
+  d:["冷盤（生火腿、鮮蝦、手打乳酪）","魚子醬焗烤生蠔、香草鹹魚丸","地中海蔬菜濃湯與蒜香麵包","季節時蔬沙拉","主菜：Prime 美國肋眼 或 波特酒法式鴨胸","西班牙海鮮燉飯","金絲焦糖蛋糕","咖啡或茶"],
+  w:"本次歐陸組<strong>最豐盛</strong>：有 Prime 肋眼、魚子醬生蠔，還有整份海鮮飯。"},
+ {n:"水鳥公園52號", id:47, lv:1, t:"每人 1200+10%・須 2 位以上同行", p:"1200+10%", sub:"須 2 位以上",
+  d:["法棍脆餅與肝醬慕斯","招牌法式美極鮮菇","奶油蔬菜濃湯","煙燻鴨胸凱撒沙拉","布根地烤田螺","海鮮義大利麵 或 松露油封鴨腿燉飯","主餐：CAB Prime 肋眼 8oz、法式小羊排、紙包魚 三選一","主廚手工甜點與飲品"],
+  w:"從前菜到甜點<strong>約 9 道</strong>，主餐可選小羊排，另贈迎賓小點，選擇彈性最大。"},
+ {n:"祝您行運", id:53, lv:2, t:"雙人分享", p:"雙人", sub:"雙人分享・人均 600",
+  d:["滑蛋大蝦飯","古法乾炒牛河","熔岩奶黃西多士","XO 醬炒蘿蔔糕","豆沙煎堆芝麻球","絲襪奶茶與港式檸檬茶"],
+  w:"茶餐廳經典一次吃齊，兩人平均<strong>一人 600 元</strong>，吃得飽但食材偏日常。"},
+ {n:"Ombré 敦南旗艦店", id:146, lv:2, t:"單人 1200+10%", p:"1200+10%", sub:"單人・含一杯酒",
+  d:["手撕麵包","田園鮮蔬沙拉","干貝濃湯 或 牛肝菌野菇濃湯","主餐 7 選 1（含干貝海膽燉飯、紅酒燉牛肋義大利麵）","甜點（200 元以下 10 款任選）","單杯紅白酒或飲品（280 元以下 62 款任選）"],
+  w:"<strong>六品加一杯酒</strong>，甜點與酒飲挑貴一點的選，實際價值更高。"},
+ {n:"La Mesa 中山", id:29, lv:2, t:"每個階段各選 1 樣", p:"各階段選 1", sub:"含酒精飲品",
+  d:["前菜：生蠔／火腿沙拉／冷肉盤","熱前菜：炸青椒／蒜香蝦／可樂餅","主菜：炭烤章魚／煎魷魚／牛肚煲","飲品：生啤、紅白酒、Sangria、氣泡酒"],
+  w:"西班牙小菜加酒精飲品，<strong>適合小酌，不是吃飽型套餐</strong>。"},
+ {n:"77opèt Restaurant", id:89, lv:2, t:"每人", p:"每人", sub:"附 house wine 一杯",
+  d:["前菜二選一：碳烤牛骨髓 或 碳烤透抽","干貝海膽燉飯","法式焦糖烤布丁","House wine 一杯"],
+  w:"道數不多，但<strong>主食用北海道干貝加海膽，還附一杯酒</strong>。"},
+ {n:"La Brasserie 巴賽麗廳", id:80, lv:3, t:"僅限平日中午", p:"1200", sub:"僅平日中午",
+  d:["法國捲麵包","前菜三選一：焗田螺／洋蔥湯／里昂沙拉","油封鴨腿襯燉白豆、櫻桃醬汁","咖啡或茶"],
+  w:"經典法式，但<strong>只有前菜加一道主餐，沒有甜點</strong>。"},
+ {n:"Poetry 如詩", id:104, lv:3, t:"出示台哥大 APP 可享用餐九折", p:"1200", sub:"台哥大 APP 九折",
+  d:["起士冷肉盤與好心情濃湯","雙拼胭脂鴨佐發酵鳳梨辣醬","海鹽起士焦糖布丁"],
+  w:"<strong>共 4 道</strong>，未標示含飲品，屬中等。"}
+],
+it: [
+ {n:"GUSTOSO 義大利餐廳", id:38, lv:2, t:"9/25–9/28 不適用", p:"1200", sub:"9/25–9/28 除外・附調酒",
+  d:["台北印象鹹水雞花園沙拉","蚵仔煎風曼哈頓牡蠣巧達湯","慢燉澳洲和牛頰","伯爵茶蒸烤布蕾","調酒 或 台灣西西里咖啡"],
+  w:"用台北小吃重新詮釋的主題菜色，<strong>附一杯調酒</strong>，但有 4 天不適用。"},
+ {n:"TRASTEVERE", id:110, lv:2, t:"每人 1200+10%", p:"1200+10%", sub:"每人・五道式",
+  d:["海鮮酪梨野蔬沙拉佐烏魚子","夏季黑松露瑪莎拉奶油寬麵","主菜二選一：爐烤日本真鯛 或 紐西蘭帶骨小牛肋排","傳統提拉米蘇","咖啡或紅茶"],
+  w:"<strong>五道式，主菜有真鯛或小牛肋排，義式組內容最完整。</strong>"},
+ {n:"NO.641 Bistro", id:52, lv:2, t:"每人 1200+10%", p:"1200+10%", sub:"含一杯酒・整瓶再 8 折",
+  d:["荷蘭風小沙拉","每日主廚湯品","香烤佛卡夏","普羅旺斯油封鴨腿佐薯泥","甜點五選一","紅酒、白酒或粉紅氣泡酒 三選一"],
+  w:"<strong>含一杯酒</strong>，點套餐再買整瓶酒享 8 折。"},
+ {n:"SLICE", id:27, lv:2, t:"僅限大直 NOKE 門市・僅內用", p:"1200", sub:"僅大直 NOKE",
+  d:["乳酪炸球","精選沙拉與每日例湯","主餐二選一：碳烤美國牛小排 或 時令鮮魚","伴茶小點","咖啡或茶"],
+  w:"內容完整，但<strong>只有一家門市供應</strong>。"},
+ {n:"台北美福飯店 GMT 義大利餐廳", id:58, lv:2, t:"僅午間・1200+10%（出示台哥大 APP 免服務費）", p:"1200+10%", sub:"僅午間・可免服務費",
+  d:["手工麵包與沾醬","季節時蔬沙拉","南瓜蔬菜濃湯","主菜三選一：羊肉香腸麵疙瘩／香煎鮮魚／澳洲肋眼 4oz","甜點","咖啡或茶"],
+  w:"<strong>五星飯店午餐</strong>，道數齊全，主菜有肋眼可選。"},
+ {n:"Tierra Casa Restaurant", id:1, lv:2, t:"人數未標示", p:"1200", sub:"滿 1500 送季節飲品",
+  d:["手工麵包與主廚濃湯","當季水果優格沙拉","黑鮪魚麵疙瘩","和牛紐約客牛排","精選飲品"],
+  w:"<strong>有和牛牛排和飲品</strong>，滿 1500 元再送季節飲品一杯。"},
+ {n:"SPC 秘密披薩俱樂部", id:57, lv:2, t:"原價 2270 → 1200，約 5 折", p:"1200", sub:"原價 2270・約 5 折",
+  d:["海尼根 4 瓶","任一口味披薩","現炸薯條","經典炸雞"],
+  w:"<strong>折扣力道最大</strong>，但以啤酒為主，適合朋友聚會，不像正餐。"},
+ {n:"法菲利 VoiLa Viet 歐越料理", id:2, lv:2, t:"雙人份・原價 1480 → 1200+10%", p:"1200+10%", sub:"原價 1480・雙人份",
+  d:["繽紛地中海沙拉與海鮮湯","佛卡夏（肉食 或 綜合蕈菇）","西班牙海鮮飯 或 南法海鮮麵","餐廳週限定海陸烤物拼盤","手工焦糖布丁"],
+  w:"官網標題寫單人、內容寫雙人份，<strong>以雙人份為準，訂位時再確認</strong>。"},
+ {n:"香頌私宅洋樓", id:22, lv:2, t:"官網寫每人 1200+10%，但註明 2 人共食、附餐為 2 人份", p:"1200+10%", sub:"每人 or 共食？待確認",
+  d:["手作麵包與主廚濃湯","炙燒鰹魚沙拉","深海虎蝦香辣龍蝦醬手工義大利麵","戰斧豬排佐奶油野菇醬","特製甜點與咖啡或茶"],
+  w:"若是 <strong>2 人共用 1200 元就非常划算，訂位前先確認是每人還是每桌</strong>。"},
+ {n:"波記茶餐廳", id:21, lv:3, t:"人數未標示（份量像 2 人分享）", p:"1200", sub:"份量約 2 人",
+  d:["星洲炒米粉","XO 蝦仁炒飯","鳳梨咕咾肉","魚子燒賣","香煎蘿蔔糕","椰汁西米露","90 元以下飲料 2 杯"],
+  w:"菜色多樣，但<strong>都是茶餐廳日常食材</strong>。"},
+ {n:"阿薄郎台式小酒館", id:60, lv:3, t:"人數未標示", p:"1200", sub:"約 14 品項",
+  d:["豪華燒串組：雞腿串、豆乾、甜不辣、雞軟骨、香腸、挪威烤鯖魚、蔥蔥豬五花等約 14 品項"],
+  w:"偏下酒點心，單價低，<strong>1200 元感覺一般</strong>。"},
+ {n:"Pizza Americano 老美披薩", id:54, lv:3, t:"份量約 2 人", p:"1200", sub:"約 2 人份",
+  d:["老美披薩","牧場沙拉","每日湯品","蜂蜜蒜香辣椒醬","飲料 2 杯","餅乾"],
+  w:"披薩店平價定位，<strong>1200 元折扣感不明顯</strong>。"},
+ {n:"DOMANI 義式餐廳", id:66, lv:3, t:"每人 1200+10%・僅一般席・部分限量", p:"1200+10%", sub:"僅一般席・部分限量",
+  d:["蕃茄蜜餞乳酪沙拉","松露南瓜湯","波隆那寬帶麵 或 松露蛋黃螺旋管麵","阿芙加朵"],
+  w:"<strong>四道式，主食是麵，沒有肉或海鮮主菜</strong>。"},
+ {n:"Parko Parco 義大利牛肚包", id:132, lv:3, t:"單人套餐 1200+10%", p:"1200+10%", sub:"單人",
+  d:["曼托瓦式酥炸櫛瓜","炸牛肚","正宗粉紅醬麵","橄欖油鹽之花奶酪"],
+  w:"佛羅倫斯街頭風味，<strong>特色鮮明但價位偏高</strong>。"}
+]
+};
+
+// 宴客樓：官網未公布內容 → 獨立掛在末尾
+const EXTRA = {n:"宴客樓", id:101, lv:4, cat:"cn", t:"須提前預約並告知參加 1200+10%", p:"1200+10%", sub:"官網未公布內容",
+  d:["官網未公布套餐內容"],
+  w:"<strong>無法判斷划不划算，訂位時務必問清楚菜色。</strong>"};
+
+const LV = {1:["最划算","lv1"],2:["划算","lv2"],3:["普通","lv3"],4:["待確認","lv4"]};
+const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>';
+
+function card(o){
+  const [txt, cls] = LV[o.lv];
+  const d = o.d.map(x=>`<li>${x}</li>`).join("");
+  return `<article class="card ${cls}" style="--c:var(--${cls})" data-lv="${o.lv}" data-k="${(o.n+" "+o.d.join(" ")).toLowerCase()}">
+    <div class="c-head"><h3>${o.n}</h3><span class="badge ${cls}">${txt}</span></div>
+    <div class="terms">${o.t}</div>
+    <ul class="dishes">${d}</ul>
+    <div class="why">${o.w}</div>
+    <div class="c-foot">
+      <div class="price">${o.p}<small>${o.sub||""}</small></div>
+      <a class="linkbtn" href="${BASE}${o.id}" target="_blank" rel="noopener">官網詳情 ${ICON}</a>
+    </div>
+  </article>`;
+}
+
+// render
+["cn","eu","it"].forEach(k=>{
+  document.querySelector(`[data-grid="${k}"]`).innerHTML = DATA[k].map(card).join("");
+});
+// 宴客樓附在最末（中式區）
+document.querySelector('[data-grid="cn"]').insertAdjacentHTML("beforeend", card(EXTRA));
+document.getElementById("n-cn").textContent = DATA.cn.length+1+" 家";
+document.getElementById("n-eu").textContent = DATA.eu.length+" 家";
+document.getElementById("n-it").textContent = DATA.it.length+" 家";
+
+// count on filter button
+const allCards = [...document.querySelectorAll(".card")];
+document.querySelector('[data-f="all"] .cnt').textContent = allCards.length;
+
+// filter
+let cur = "all", q = "";
+const btns = [...document.querySelectorAll(".fbtn[data-lv]")];
+function apply(){
+  let n = 0;
+  allCards.forEach(c=>{
+    const okLv = cur==="all" ? true : c.dataset.lv===cur.slice(2);
+    const okQ  = !q || c.dataset.k.includes(q);
+    const show = okLv && okQ;
+    c.classList.toggle("is-hidden", !show);
+    if(show) n++;
+  });
+  document.getElementById("empty").classList.toggle("on", n===0);
+}
+btns.forEach(b=>b.addEventListener("click",()=>{
+  btns.forEach(x=>x.classList.remove("is-on"));
+  b.classList.add("is-on");
+  cur = b.dataset.f; apply();
+}));
+let t; document.getElementById("q").addEventListener("input",e=>{
+  clearTimeout(t); t=setTimeout(()=>{q=e.target.value.trim().toLowerCase();apply();},120);
+});
+</script>
+</body>
+</html>
